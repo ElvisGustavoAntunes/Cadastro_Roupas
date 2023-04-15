@@ -49,19 +49,83 @@
       <h2>Cadastro de Item</h2>
       <p class="lead">Estamos quase lá, precisamos somente de algumas informações sobre os items.</p>
     </div>
-  </div>
+    <!--Formulario, Dados-->
+    <div class="col-13 order-md-3"> 
+      <h4 class="mb-3">Insira os dados do item</h4>
+      <form>
+        <div class="row">
+          <div class="col-md-6 mb-3">
+            Insira descrição do item
+              <input type="text" class="form-control" name="Desc_Item" placeholder=""  required>
+            <div class="invalid-feedback">
+              Insira descrição do item.
+            </div>
+          </div>
 
-  <main>
-   
-  </main>
-  <footer class="my-5 pt-5 text-muted text-center text-small">
-    <p class="mb-1">&copy; 2023 Gustavo Antunes </p>
+          <div class="col-md-3 mb-3">
+            Tamanho
+            <select class="form-select " aria-label="Default select example">
+              <option selected>Seleciona o tamanho</option>
+              <option value="1">P</option>
+              <option value="2">M</option>
+              <option value="3">G</option>
+              <option value="3">GG</option>
+              <option value="4">S/N</option>
+            </select>
+          </div>
+
+          <div class="col-md-3 mb-3">
+            Quantidade
+              <input type="text" class="form-control"  placeholder=""  required>
+            <div class="invalid-feedback">
+              Insira a Quantidade.
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            Numero referencia
+              <input type="text" class="form-control"  placeholder=""  required>
+            <div class="invalid-feedback">
+              Insira a Quantidade.
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            Valor de Custo
+              <input type="text" class="form-control"  placeholder=""  required>
+            <div class="invalid-feedback">
+              Insira a Quantidade.
+            </div>
+          </div>
+
+          <div class="col-md-4 mb-3">
+            Valor de Venda
+              <input type="text" class="form-control"  placeholder=""  required>
+            <div class="invalid-feedback">
+              Insira a Quantidade.
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Observação</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          </div>
+        
+        <hr style="margin-top: 30px;">
+        <button type="button" class="btn btn-lg btn-block" style="background-color:  #ecd0df;">Cadastrar</button>
+
+        </div>
+      </form>
+    </div>
+  </div>
+    <footer class="my-5 pt-5 text-muted text-center text-small">
+      <p class="mb-1">&copy; 2023 Gustavo Antunes </p>
         <ul class="list-inline">
             <li class="list-inline-item"><a href="#">Privacidade</a></li>
             <li class="list-inline-item"><a href="#">Termos</a></li>
             <li class="list-inline-item"><a href="#">Suporte</a></li>
         </ul>
-  </footer>
+    </footer>
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
