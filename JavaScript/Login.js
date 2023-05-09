@@ -6,7 +6,7 @@ function logar(){
 
     if(usuario.value == "admin" && senha.value == "admin"){
         localStorage.setItem("acesso", true);
-
         window.location.href = "Cadastro.html";
+        preventDefault();
     }
 }
