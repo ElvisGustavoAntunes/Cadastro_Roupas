@@ -19,20 +19,20 @@
 <body style="background-color:  #f3e6ed;">
 
   <div class="container mt-5">
-    <!--<img src="Icons/fotoMarca.jpeg" class="d-inline-block align-top" >-->
     <div class="row align-items-rigth">
-      <div class="col-md-10 mx-auto col-lg-5">
+      <div id="form" class="col-md-10 mx-auto col-lg-5 " >
         <form id="form" class="p-4 p-md-5 border rounded-3">
           <div class="form-floating mb-3">
-            <input type="text" class="form-control" id="inputLogin" />
-            <label for="inputLogin">Login</label>
+            <input type="text" class="form-control" id="login" />
+            <label for="login">Login</label>
           </div>
           <div class="form-floating mb-3">
             <input type="password" class="form-control" id="senha" />
-            <label for="inputsenha">Senha</label>
+            <label for="senha">Senha</label>
           </div>
-          <button class="w-100 btn btn-lg" style="background-color:  #f3e6ed;" type="submit">Entrar</button>
+          <!--<button onclick="logar()" class="w-100 btn btn-lg" style="background-color:  #f3e6ed;">Entrar</button>-->
         </form>
+        <button onclick="logar()" class="w-100 btn btn-lg" style="background-color:  #f3e6ed; border-color: black;">Entrar</button>
       </div>
     </div>
   </div>
