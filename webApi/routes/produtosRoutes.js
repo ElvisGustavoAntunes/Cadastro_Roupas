@@ -3,7 +3,7 @@ const Produto = require('../models/Produto');
 
 //create Cadastrando
 router.post('/', async (req,res) =>{
-    const {descricao,tamanho,quantidade,referencia,valorCusto,valorVenda,observacao} = req.body
+    const {descricao,tamanho,quantidade,referencia,valorCusto,valorVenda,observacao,datainsert} = req.body
     if(!descricao){
         res.status(422).json({erro: 'A descricao do produto é obrigatoria'})
         return;
@@ -26,7 +26,8 @@ router.post('/', async (req,res) =>{
         referencia,
         valorCusto,
         valorVenda,
-        observacao
+        observacao,
+        datainsert
     }
     try{
         await Produto.create(produto)
@@ -63,7 +64,7 @@ router.get('/:id', async (req,res) =>{
 //Update Atualizando os dados
 router.patch('/:id', async (req,res) =>{
     const id = req.params.id;
-    const {descricao,tamanho,quantidade,referencia,valorCusto,valorVenda,observacao} = req.body
+    const {descricao,tamanho,quantidade,referencia,valorCusto,valorVenda,observacao,datainsert} = req.body
     const produto = {
         descricao,
         tamanho,
@@ -71,7 +72,8 @@ router.patch('/:id', async (req,res) =>{
         referencia,
         valorCusto,
         valorVenda,
-        observacao
+        observacao,
+        datainsert
     }
     try{
         const atualizaProduto = await Produto.updateOne({_id : id}, produto)

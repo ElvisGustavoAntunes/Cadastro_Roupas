@@ -7,7 +7,8 @@ const Produto = mongoose.model('Produto',{
     referencia: String,
     valorCusto: Number,
     valorVenda: Number,
-    observacao: String
+    observacao: String,
+    datainsert: Date
 })
 
 module.exports = Produto

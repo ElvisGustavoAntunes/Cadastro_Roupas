@@ -6,6 +6,7 @@ function cadatrar(){
     var valor_custo = document.getElementById("valor_custo");
     var valor_venda = document.getElementById("valor_venda");
     var observação = document.getElementById("observação");
+    var datainsert = new Date();
 
     console.log(descricao.value);
     console.log(tamanho.value);
@@ -14,5 +15,5 @@ function cadatrar(){
     console.log(valor_custo.value);
     console.log(valor_venda.value);
     console.log(observação.value);
-  
+    console.log(datainsert.toUTCString());
 }
