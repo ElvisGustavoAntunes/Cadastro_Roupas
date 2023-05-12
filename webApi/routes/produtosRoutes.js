@@ -85,5 +85,20 @@ router.patch('/:id', async (req,res) =>{
         res.status(500).json({error: error})
     }
 })
-
+//metodo de remocao
+router.delete('/:id', async (req,res) =>{
+    const id = req.params.id;
+    const produtos = await Produto.findOne({_id: id})
+    if(!produtos)
+    {
+        res.status(422).json('{Mensage: Produto não Cadastrado }');
+        return;
+    }
+    try{
+        await Produto.deleteOne({_id: id})
+        res.status(200).json({ message: 'Produto removido com sucesso'})
+    }catch(error){
+        res.status(500).json({error: error})
+    }
+})
 module.exports = router;
