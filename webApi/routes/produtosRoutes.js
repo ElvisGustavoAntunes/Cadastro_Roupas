@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const Produto = require('../models/Produto');
 
-
+//create Cadastrando
 router.post('/', async (req,res) =>{
     const {descricao,tamanho,quantidade,referencia,valorCusto,valorVenda,observacao} = req.body
 
@@ -28,7 +28,6 @@ router.post('/', async (req,res) =>{
         observacao
     }
 
-    //create
     try{
         await Produto.create(produto)
         res.status(201).json({message : 'Produto Cadastrado com Sucesso'})
@@ -36,7 +35,6 @@ router.post('/', async (req,res) =>{
     }catch(error){
         res.status(500).json({error: error})
     }
-
 })
 
 module.exports = router;

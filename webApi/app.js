@@ -15,7 +15,7 @@ app.use(express.json());
 app.use('/produtos',produtosRoutes);
 
 
-//porta
+//Conexão
 const DB_USER = 'elvisgustavoantunes'
 const DB_PASSWORD = '3LaAsOOI2zOiLrqW'
 
