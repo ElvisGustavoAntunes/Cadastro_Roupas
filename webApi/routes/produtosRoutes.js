@@ -54,11 +54,36 @@ router.get('/:id', async (req,res) =>{
             res.status(422).json('{Mensage: Produto não Cadastrado }');
             return;
         }
-        
         res.status(200).json(produtos)
     }catch(error){
         res.status(500).json({error: error})
     }
-
 })
+
+//Update Atualizando os dados
+router.patch('/:id', async (req,res) =>{
+    const id = req.params.id;
+    const {descricao,tamanho,quantidade,referencia,valorCusto,valorVenda,observacao} = req.body
+    const produto = {
+        descricao,
+        tamanho,
+        quantidade,
+        referencia,
+        valorCusto,
+        valorVenda,
+        observacao
+    }
+    try{
+        const atualizaProduto = await Produto.updateOne({_id : id}, produto)
+
+        if(atualizaProduto.matchedCount === 0){
+            res.status(422).json('{Mensage: Produto não Cadastrado }');
+            return;
+        } 
+        res.status(200).json(produto)
+    }catch(error){
+        res.status(500).json({error: error})
+    }
+})
+
 module.exports = router;
