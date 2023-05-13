@@ -1,10 +1,9 @@
 // config inicial
+require('dotenv').config();
 const express = require('express');
 const { default: mongoose } = require('mongoose');
 const produtosRoutes = require('./routes/produtosRoutes');
 const app = express();
-require('dotenv').config()
-
 
 //ler json Middleware
 app.use(
