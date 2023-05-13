@@ -3,6 +3,7 @@ const express = require('express');
 const { default: mongoose } = require('mongoose');
 const produtosRoutes = require('./routes/produtosRoutes');
 const app = express();
+const handlebars = require('express-handlebars');
 
 
 //ler json Middleware
