@@ -3,7 +3,7 @@ const express = require('express');
 const { default: mongoose } = require('mongoose');
 const produtosRoutes = require('./routes/produtosRoutes');
 const app = express();
-const handlebars = require('express-handlebars');
+require('dotenv').config()
 
 
 //ler json Middleware
@@ -17,8 +17,8 @@ app.use('/produtos',produtosRoutes);
 
 
 //Conexão
-const DB_USER = 'elvisgustavoantunes'
-const DB_PASSWORD = '3LaAsOOI2zOiLrqW'
+const DB_USER = process.env.DB_USER;
+const DB_PASSWORD = process.env.DB_PASSWORD;
 
 mongoose.connect(
     `mongodb+srv://${DB_USER}:${DB_PASSWORD}@apicluster.movyesi.mongodb.net/?retryWrites=true&w=majority`,
