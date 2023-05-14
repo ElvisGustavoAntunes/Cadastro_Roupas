@@ -16,7 +16,7 @@ function cadatrar(){
     event.preventDefault();
     url = "http://localhost:3000/produtos"
 
-    let descricao = document.getElementById("desc_Item").value;
+    let descricao = document.getElementById("descricao").value;
     let tamanho = document.getElementById("tamanho").value;
     let quantidade = document.getElementById("quantidade").value;   
     let referencia = document.getElementById("referencia").value;
@@ -26,7 +26,7 @@ function cadatrar(){
     let datainsert = new Date();
 
     body = {
-        "descricao"  : desc_Item,
+        "descricao"  : descricao,
         "tamanho"    : tamanho,
         "quantidade" : quantidade,
         "referencia" : referencia,

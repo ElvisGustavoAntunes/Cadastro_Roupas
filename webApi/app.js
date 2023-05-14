@@ -4,6 +4,16 @@ const express = require('express');
 const { default: mongoose } = require('mongoose');
 const produtosRoutes = require('./routes/produtosRoutes');
 const app = express();
+// Headers
+
+app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
 
 //ler json Middleware
 app.use(
