@@ -5,11 +5,12 @@
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <script src="JavaScript/Dados.js" type="text/JavaScript"></script>
+    <script src="JavaScript/SomenteLetras.js"></script>
+    <script src="JavaScript/SomenteNumeros.js"></script>
 </head>
 <body>
   <header>
@@ -52,25 +53,25 @@
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="desc_Item">Insira descrição do item</label>
-            <input type="text" class="form-control" id="descricao" placeholder="" required>
+            <input type="text" class="form-control" id="descricao" onkeypress="return onlyletters();" required>
             <div class="invalid-feedback">
               Insira descrição do item.
             </div>
           </div>
           <div class="col-md-3 mb-3">
             <label for="tamanho">Tamanho</label>
-            <input type="text" class="form-control" id="tamanho" placeholder="" required>
+            <input type="text" class="form-control" id="tamanho" placeholder="" maxlength="3" required>
           </div>
           <div class="col-md-3 mb-3">
             <label for="quantidade">Quantidade</label>
-            <input type="text" class="form-control" id="quantidade" placeholder="" required> 
+            <input type="text" class="form-control" id="quantidade" onkeypress="return onlynumber();" maxlength="4" required> 
             <div class="invalid-feedback">
               Insira a Quantidade.
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <label for="referencia">Numero referencia</label>
-            <input type="text" class="form-control" id="referencia" placeholder="" required>
+            <input type="text" class="form-control" id="referencia" onkeypress="return onlynumber();" required>
             <div class="invalid-feedback">
               Numero referencia.
             </div>
@@ -78,27 +79,26 @@
           <div class="col-md-4 mb-3">
             Valor de Custo
             <label for="valor_custo">Valor de Custo</label>
-            <input type="text" class="form-control" id="valor_custo" placeholder="" required>
+            <input type="text" class="form-control" id="valor_custo" onkeypress="return onlynumber();" required>
             <div class="invalid-feedback">
               Valor de Custo.
             </div>
           </div>
           <div class="col-md-4 mb-3">
             <label for="valor_venda">Valor de Venda</label>
-            <input type="text" class="form-control" id="valor_venda" placeholder="" required>
+            <input type="text" class="form-control" id="valor_venda" onkeypress="return onlynumber();" required>
             <div class="invalid-feedback">
               Valor de Venda.
             </div>
           </div>
           <div class="form-group">
             <label for="observação">Observação</label>
-            <textarea class="form-control" id="observação" rows="3"></textarea>
+            <textarea class="form-control" id="observação" placeholder="Digite uma breve observação do produto" rows="3"></textarea>
           </div>
           <hr style="margin-top: 30px;">
           <button type="submit" class="btn btn-lg btn-block" style="background-color:  #ecd0df;">Cadastrar</button>
         </div>
       </form>
-      <!--<button onclick="cadatrar()" type="button" class="btn btn-lg btn-block" style="background-color:  #ecd0df; width: 100%;">Cadastrar</button>-->
     </div>
   </div>
   <footer class="my-5 pt-5 text-muted text-center text-small">
