@@ -1,19 +1,39 @@
-function cadatrar(){
-    var descricao = document.getElementById("desc_Item");
-    var tamanho = document.getElementById("tamanho");
-    var quantidade = document.getElementById("quantidade");   
-    var referencia = document.getElementById("referencia");
-    var valor_custo = document.getElementById("valor_custo");
-    var valor_venda = document.getElementById("valor_venda");
-    var observação = document.getElementById("observação");
-    var datainsert = new Date();
+function fazPost(url,body){
+    console.log("Body=",body);
+    let request = new XMLHttpRequest();
+    request.open("POST",url,true);
+    request.setRequestHeader("Content-type","application/json");
+    request.send(JSON.stringify(body));
 
-    console.log(descricao.value);
-    console.log(tamanho.value);
-    console.log(quantidade.value);
-    console.log(referencia.value);
-    console.log(valor_custo.value);
-    console.log(valor_venda.value);
-    console.log(observação.value);
-    console.log(datainsert.toUTCString());
+    request.onload = function(){
+        console.log(this.responseText)
+    }
+    return request.responseText;
+}
+
+function cadatrar(){
+
+    event.preventDefault();
+    url = "http://localhost:3000/produtos"
+
+    let descricao = document.getElementById("desc_Item").value;
+    let tamanho = document.getElementById("tamanho").value;
+    let quantidade = document.getElementById("quantidade").value;   
+    let referencia = document.getElementById("referencia").value;
+    let valor_custo = document.getElementById("valor_custo").value;
+    let valor_venda = document.getElementById("valor_venda").value;
+    let observação = document.getElementById("observação").value;
+    let datainsert = new Date();
+
+    body = {
+        "descricao"  : desc_Item,
+        "tamanho"    : tamanho,
+        "quantidade" : quantidade,
+        "referencia" : referencia,
+        "valorCusto" : valor_custo,
+        "valorVenda" : valor_venda,
+        "observacao" : observação,
+        "datainsert" : datainsert
+    }
+    fazPost(url, body);
 }

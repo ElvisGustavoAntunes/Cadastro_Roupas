@@ -48,7 +48,7 @@
     <!--Formulario, Dados-->
     <div class="col-13 order-md-3">
       <h4 class="mb-3">Insira os dados do item</h4>
-      <form method="POST">
+      <form onsubmit="cadatrar()">
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="desc_Item">Insira descrição do item</label>
@@ -95,10 +95,10 @@
             <textarea class="form-control" id="observação" rows="3"></textarea>
           </div>
           <hr style="margin-top: 30px;">
-          <!--<button type="button" class="btn btn-lg btn-block" style="background-color:  #ecd0df;">Cadastrar</button>-->
+          <button type="submit" class="btn btn-lg btn-block" style="background-color:  #ecd0df;">Cadastrar</button>
         </div>
       </form>
-      <button onclick="cadatrar()" type="button" class="btn btn-lg btn-block" style="background-color:  #ecd0df; width: 100%;">Cadastrar</button>
+      <!--<button onclick="cadatrar()" type="button" class="btn btn-lg btn-block" style="background-color:  #ecd0df; width: 100%;">Cadastrar</button>-->
     </div>
   </div>
   <footer class="my-5 pt-5 text-muted text-center text-small">
