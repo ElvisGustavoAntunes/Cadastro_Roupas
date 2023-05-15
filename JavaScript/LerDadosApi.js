@@ -50,6 +50,4 @@ function main() {
         tabela.appendChild(linha);
     });
 }
-
 main();
-
