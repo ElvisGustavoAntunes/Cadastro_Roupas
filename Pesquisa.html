@@ -43,11 +43,21 @@
     <!--NAV BAR FIM-->
   </header>
 
-  <table id="tabela" class="table table-sm">
+  <table id="tabela" class="table caption-top">
+    <caption>Lista de produtos cadastrados</caption>
+    <thead>
+      <th scope="col">ID</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Tamanho</th>
+      <th scope="col">Quantidade</th>
+      <th scope="col">Referência</th>
+      <th scope="col">Valor de Custo</th>
+      <th scope="col">Valor de Venda</th>
+      <th scope="col">Observação</th>
+      <th scope="col">Data e Hora</th>
+    </thead>
 
   </table>
-  <script src="JavaScript/LerDadosApi.js" type="text/JavaScript"></script>
- 
 
   <footer class="my-5 pt-5 text-muted text-center text-small">
     <p class="mb-1">&copy; 2023 Gustavo Antunes </p>
@@ -58,6 +68,7 @@
     </ul>
   </footer>
   <!-- Bootstrap JavaScript Libraries -->
+  <script src="JavaScript/LerDadosApi.js" type="text/JavaScript"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
     integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
     </script>
